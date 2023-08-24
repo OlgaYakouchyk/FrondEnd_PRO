@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+@media(min-width: 1240px){
+    body{
+        background-color: red;
+    }
+}
+@media(min-width: 840px) and (max-width: 1240px){
+    body{
+        background-color: orange;
+    }
+}
+@media(min-width: 640px) and (max-width: 840px){
+    body{
+        background-color: violet;
+    }
+}
+
+@media(max-width:640px){
+    body{
+        background-color: black;
+    }
+} */
+
+.main {
+   
+}
+
+.conteiner{
+    max-width: 1296px;
+    margin: 0 auto;
+    
+    
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo_rith{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo_rith{
+    gap: 56px;
+}
