@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+h1 {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #404149;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #404149;
+}
+
+h4 {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.42px;
+  color: #000;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #999;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about {
+  background: url("./img/Rectangle.jpg") no-repeat center center / cover;
+}
+
+.about_subtutle {
+  color: white;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.about_list {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 57px 130px;
+}
+
+.about_list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about_list div:nth-child(1) {
+  color: #f7654a;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.about_list div:nth-child(2) {
+  color: #000;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.about_list div:nth-child(3) {
+  color: var(--gray, #999);
+  text-align: center;
+  font-family: Oswald;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.projects h2 {
+}
+.projects-list {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+.projects-items div:nth-child(2) {
+  background-color: #f7654a;
+  width: 40px;
+  height: 6px;
+  margin: 45px;
+}
+
+.request {
+  background-color: #f7654a;
+}
+.request_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.request_left {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 45px 0;
+}
+.request_left div:nth-child(1) {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+  text-align: left;
+}
+.request_left div:nth-child(2) {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  text-align: left;
+}
+
+button {
+  color: #000;
+  font-family: Oswald;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  width: 175px;
+  height: 49px;
+  flex-shrink: 0;
+  background: #fff;
+  border: none;
+}
+.servicese_list {
+  padding-top: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+
+}
+.serv_list_item {
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  
+}

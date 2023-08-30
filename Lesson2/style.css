@@ -1,9 +1,11 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
+ul {
+  list-style: none;
+}
 
 /* 
 @media(min-width: 1240px){
@@ -27,30 +29,183 @@
         background-color: black;
     }
 } */
-
-.main {
-   
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.conteiner{
-    max-width: 1296px;
-    margin: 0 auto;
-    
-    
+.conteiner {
+  max-width: 1296px;
+  margin: 0 auto;
 }
-.logo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo_rith{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo_rith {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 52px;
+  color: var(--white, #fff);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  padding-top: 29px;
+}
+.menu li:last-child {
+  color: black;
+  display: flex;
+  width: 194px;
+  padding: 10px 15px 10px 15px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.about {
+  background-color: #4fbfa5;
+}
 
+.about_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo_rith{
-    gap: 56px;
+.about_rith {
+  max-width: 416px;
+  color: var(--white, #fff);
+  font-family: ABeeZee;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.about_rith h2 {
+  font-size: 48px;
+}
+.about_rith p {
+  padding: 20px 0 40px 0;
+}
+
+.about_rith button {
+  background-color: #00868a;
+  display: inline-flex;
+  padding: 15px 25px 14px 25px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  font-family: ABeeZee;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.img_about{
+    padding-bottom: 57px;
+}
+.offers {
+  padding-top: 146px;
+}
+
+.offers h2 {
+  margin: 0 auto;
+  color: var(--accent-1, #00868a);
+  text-align: center;
+  font-family: ABeeZee;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 400;
+}
+.offers_list {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list_home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00868a;
+  width: 306px;
+  height: 343px;
+  flex-shrink: 0;
+}
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.text p {
+  width: 181px;
+  color: var(--white, #fff);
+  font-family: ABeeZee;
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.text button span {
+  border: 1px solid var(--white, #fff);
+  display: inline-flex;
+  padding: 20px 15px;
+  align-items: center;
+  background-color: #00868a;
+}
+.img_decor {
+  position: relative;
+  display: inline-block;
+}
+
+.img_decor h2 {
+  position: absolute;
+  display: inline-flex;
+  padding: 9px 15px 10px 15px;
+  background-color: #4fbfa5;
+  color: var(--white, #fff);
+  font-family: ABeeZee;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  top: 30px;
+  left: 30px;
+}
+.img_werehouse {
+  position: relative;
+  display: inline-block;
+}
+
+.img_werehouse h2 {
+  position: absolute;
+  display: inline-flex;
+  padding: 9px 15px 10px 15px;
+  background-color: #4fbfa5;
+  color: var(--white, #fff);
+  font-family: ABeeZee;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  top: 30px;
+  left: 30px;
+}
+
+.logo_ends {
+  padding-top: 162px;
+  padding-bottom: 31px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 56px;
 }
