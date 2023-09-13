@@ -196,6 +196,11 @@ button {
   gap: 30px;
 }
 
+.servicese_list_2:nth-child(1) div{
+  display: flex;
+  align-items: center;
+}
+
 .serv_list_item div {
   max-width: 172px;
   font-weight: 500;
