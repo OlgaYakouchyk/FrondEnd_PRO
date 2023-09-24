@@ -82,41 +82,74 @@
 
 // Создать форму, которая позволяет добавить пункт товара в массив. Данные из массива должны отображаться в интерфейсе при добавлении нового товара.
 // Реализовывать через массив с продуктами и функцией rerender.
+//создание функции для добавления в localStorage
 
-let prodacts = [];
-function addProduct(name, price) {
+function savedToLocalStorage(prodacts) {
+  localStorage.setItem("products", JSON.stringify(prodacts));
+}
+
+function getFromLocalSrorage() {
+  const newProducts = localStorage.getItem("products");
+  if (newProducts) {
+    return JSON.parse(newProducts);
+  } else {
+    return [];
+  }
+}
+
+let prodacts = getFromLocalSrorage();
+function addProduct(name, price, count) {
   const productItem = {
     name: name,
     price: price,
+    count: count,
+    id: Date.now(), //генерируем уникальный id
   };
 
   prodacts.push(productItem);
+  savedToLocalStorage(prodacts);
   rerender();
 }
 
-function rerender() {
+function rerender(filteredProducts) {
   const productList = document.querySelector("#productList");
   productList.innerHTML = "";
-  prodacts.forEach(function (product) {
+  const productToDispley = filteredProducts || prodacts;
+  productToDispley.forEach(function (product) {
     const listItem = document.createElement("li");
-    listItem.textContent = product.name + "-$" + product.price;
+    listItem.textContent = `${product.name} - price: $${product.price}, quantity: ${product.count}, ID: ${product.id}`;
     productList.appendChild(listItem);
   });
 }
 
+function filterProducts(searchText) {
+  const filterResalt = prodacts.filter(function (product) {
+    return product.name.toLowerCase().startsWith(searchText.toLowerCase());
+  });
+  rerender(filterResalt);
+}
+
 const productForm = document.querySelector("#productForm");
 productForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+  event.preventDefault(); // предотвращает обновление страницы при отправке формы
   const productName = document.getElementById("productName").value;
   const productPrice = document.getElementById("productPrice").value;
-
-  if (productName && productPrice){
-    addProduct(productName, parseFloat(productPrice))
+  const productCount = document.getElementById("productCount").value;
+  if (productName && productPrice && productCount > 0) {
+    addProduct(productName, parseFloat(productPrice), parseFloat(productCount));
     document.getElementById("productName").value = "";
     document.getElementById("productPrice").value = "";
-  }else{
-    alert('введите название и цену товара')
+    document.getElementById("productCount").value = "";
+  } else {
+    alert("введите название и цену товара");
   }
 });
 
-rerender()
+const searchInput = document.querySelector("#searchInput");
+
+searchInput.addEventListener("input", function () {
+  const sesrchText = searchInput.value;
+  filterProducts(sesrchText)
+});
+
+rerender();
